@@ -18,11 +18,12 @@ class MainActivity : AppCompatActivity() {
         val viewPager: ViewPager2 = findViewById(R.id.viewpager)
         val pagerAdapter = TestAdapter(this)
         val tabs = findViewById<TabLayout>(R.id.tabs)
+        val tabName = listOf("시작 전", "진행 중", "완료")
 
         viewPager!!.adapter = pagerAdapter
         //TabLayout과 ViewPager 연결
         TabLayoutMediator(tabs, viewPager) { tab, position ->
-            tab.text = "TAB ${(position + 1)}"
+            tab.text = "${tabName[position]}"
         }.attach()
     }
 
