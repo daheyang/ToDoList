@@ -8,5 +8,6 @@ import androidx.room.PrimaryKey
 data class Todo(
     @PrimaryKey(autoGenerate = true)
     var id : Long?,
-    @ColumnInfo(name = "content") var contents: String
+    @ColumnInfo(name = "content")
+    var contents: String
 )

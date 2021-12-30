@@ -8,13 +8,13 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import org.daheyang.todolist.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         val viewPager: ViewPager2 = findViewById(R.id.viewpager)
         val pagerAdapter = TestAdapter(this)
         val tabs = findViewById<TabLayout>(R.id.tabs)
